@@ -1,0 +1,5 @@
+# Keep personal riding photos out of Google image results and search thumbnails.
+/img/h-*
+  X-Robots-Tag: noindex
+/img/caroline.webp
+  X-Robots-Tag: noindex
