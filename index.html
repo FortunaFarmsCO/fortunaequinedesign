@@ -142,6 +142,8 @@ textarea{min-height:110px;resize:vertical}
 .sent{background:#E8F3E8;color:#1F5130;border-radius:10px;padding:10px 12px;font-size:14px}
 footer{font-size:14px;color:var(--ink2);padding-block:22px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+footer .partners a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}footer .partners a:hover{text-decoration-thickness:2px}
+@media (max-width:720px){footer .wrap{flex-direction:column;gap:14px}footer .partners{display:flex;flex-direction:column;gap:4px}footer .partners .dot{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
@@ -285,7 +287,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 </form>
 </div></section>
 </main>
-<footer><div class="wrap"><span>© 2026 Fortuna Equine Design</span><span>Castle Rock, Colorado</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Fortuna Equine Design</span><span class="partners"><span class="pl">Partner sites:</span> <a href="https://stablevetrecords.com">StableVetRecords.com</a><span class="dot"> · </span><a href="https://fortunafarms.com">FortunaFarms.com</a></span><span>Castle Rock, Colorado</span></div></footer>
 <script>document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();const body='Name: '+v('n')+'\nEmail: '+v('e')+'\nI am a: '+v('w')+'\n\n'+v('m');location.href='mailto:CarolineLaBarre@FortunaEquineDesign.com?subject='+encodeURIComponent('Barn design inquiry'+(v('n')?' from '+v('n'):''))+'&body='+encodeURIComponent(body);const n=document.getElementById('fn');n.className='sent';n.textContent='Your email app should open with your message. If it doesn’t, email me at CarolineLaBarre@FortunaEquineDesign.com.';});</script>
 <dialog id="lb" aria-label="Photo viewer"><div class="in"><img alt=""><button class="x" type="button" aria-label="Close">&times;</button><button class="pv" type="button" aria-label="Previous photo">&#8249;</button><button class="nx" type="button" aria-label="Next photo">&#8250;</button><div class="cap"></div></div></dialog>
 <script>(()=>{const imgs=[...document.querySelectorAll('.gallery img')],d=document.getElementById('lb'),im=d.querySelector('img'),cap=d.querySelector('.cap');let i=0;
