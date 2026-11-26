@@ -149,6 +149,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 footer .partners a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}footer .partners a:hover{text-decoration-thickness:2px}
 @media (max-width:720px){footer .wrap{flex-direction:column;gap:14px}footer .partners{display:flex;flex-direction:column;gap:4px}footer .partners .dot{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.hero-photo.lw{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 40px 70px -20px rgba(0,0,0,.55)}
+.hero-photo.lw img.ph{box-shadow:none;border-radius:0;display:block}
+.hero-photo .shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,22,42,0) 45%,rgba(10,22,42,.35) 100%)}
+.hero-photo img.st{aspect-ratio:auto;object-fit:contain;box-shadow:none;border-radius:0;position:absolute;left:48.6%;top:77.3%;width:27%;height:auto;transform:translate(-50%,-50%);filter:drop-shadow(0 2px 14px rgba(0,0,0,.35));pointer-events:none}
 </style>
 </head>
 <body>
@@ -166,7 +170,7 @@ footer .partners a{color:var(--blue);font-weight:600;text-decoration:underline;t
 <p class="lead">I help horse owners, builders and architects plan stables and site layouts that are efficient to run and healthy, happy and safe for the horses inside them. I look at every space through the horse’s eyes, and through the daily routine of the people who care for them.</p>
 <div class="ctas"><a class="btn" href="#contact">Talk About Your Barn</a><a class="btn2" href="#work">See Fortuna Farms example in Colorado</a></div>
 </div>
-<figure class="hero-photo" style="margin:0"><img src="img/aisle-hero.webp" fetchpriority="high" alt="Center aisle of the Fortuna Farms stable, with black steel and wood stall fronts under a long skylight"></figure>
+<figure class="hero-photo lw" style="margin:0"><img class="ph" src="img/aisle-wide.webp" srcset="img/aisle-wide.webp 1000w, img/aisle-wide-lg.webp 2000w" sizes="(max-width:880px) 100vw, 45vw" fetchpriority="high" alt="Center aisle of the Fortuna Farms stable, with black steel and wood stall fronts on both sides"><div class="shade"></div><img class="st" src="img/fed-stacked-white.png" alt="" width="720" height="619"></figure>
 </div></div>
 
 <section id="approach"><div class="wrap split">
